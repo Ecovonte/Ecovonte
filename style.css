@@ -1,0 +1,334 @@
+/* Configurações Globais */
+:root {
+    --primary-color: #00796b; /* Verde-Água/Turquesa - Cor principal da sustentabilidade */
+    --secondary-color: #2e8b57; /* Verde-Mar - Destaque dos cards */
+    --accent-color: #0288d1; /* Azul Vibrante - Para botões CTA e instrução do mapa */
+    --text-color: #333;
+    --bg-light: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header e Navegação */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Botão CTA */
+.btn-cta {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 25px;
+    margin-top: 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-cta:hover {
+    background-color: #01579b;
+    transform: translateY(-2px);
+}
+
+/* Seções Padrão */
+section {
+    padding: 80px 0;
+}
+
+section:nth-child(even) { 
+    background-color: var(--bg-light);
+}
+
+section h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+/* Seção Hero (Início) - IMAGEM DE FUNDO E OTIMIZAÇÃO */
+.hero {
+    /* ⚠️ Deve haver o arquivo fundo-eco.jpg na mesma pasta. */
+    background-color: #3f5144; 
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+        url('fundo-eco.jpg'); 
+        
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-size: cover; 
+    
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    
+    transition: background-image 0.5s ease-in-out; 
+}
+
+.hero h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 10px;
+    display: inline-block;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Grid de Cards */
+.grid-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    flex: 1 1 300px; 
+    min-height: 200px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.card h4 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card ul li:before {
+    content: "♻️ "; 
+    margin-right: 5px;
+}
+
+/* Mapas e Formulários (Embeds Responsivos) */
+.map-responsive {
+    overflow: hidden;
+    /* Ajusta a proporção 16:9 (altura/largura) */
+    padding-bottom: 56.25%; 
+    position: relative;
+    height: 0;
+    margin-bottom: 25px; 
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 8px;
+}
+
+/* Caixa de Instrução de Mapa */
+.map-instruction-box {
+    text-align: center;
+    margin-top: 25px;
+    padding: 25px;
+    background-color: #e6f7ff; /* Fundo azul claro para indicar funcionalidade */
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.map-instruction-box h4 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.map-instruction-box p {
+    margin: 5px 0;
+    color: var(--text-color);
+}
+
+.map-instruction-box .highlight {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 10px;
+    display: block;
+}
+
+
+/* Estilo do Formulário Simples */
+.simple-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.simple-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.simple-form input[type="text"],
+.simple-form input[type="email"],
+.simple-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.simple-form textarea {
+    resize: vertical;
+}
+
+.simple-form .btn-submit {
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.simple-form .btn-submit:hover {
+    background-color: #216d44;
+}
+
+.form-instruction-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* ======================================= */
+/* RESPONSIVIDADE (MEDIA QUERIES) */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    
+    /* 1. LAYOUT PRINCIPAL */
+    section {
+        padding: 40px 0; 
+    }
+
+    /* 2. HEADER E NAVEGAÇÃO */
+    header .container {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 5px 8px; 
+        font-size: 0.9em;
+    }
+
+    /* 3. HERO SECTION (Tamanho do Texto) */
+    .hero h2 {
+        font-size: 1.8em; 
+    }
+    
+    .hero p {
+        font-size: 1em;
+    }
+
+    /* 4. CARDS E GRIDS */
+    .grid-cards {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .card {
+        min-height: auto; 
+    }
+}

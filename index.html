@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecovonté - Descarte Consciente no ABC</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Ecovonté</h1>
+            <nav>
+                <a href="#home">Início</a>
+                <a href="#ods">ODS 11 e 12</a>
+                <a href="#conscientizacao">Conscientização</a>
+                <a href="#mapa">Pontos de Coleta (ABC)</a>
+                <a href="#comunidade">Sugestões</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Seja a Vontade da Mudança. Descarte Consciente.</h2>
+                <p>
+                    O Ecovonté é um projeto de conscientização e utilidade pública que visa transformar o descarte de resíduos no ABC Paulista. 
+                    Nosso trabalho está diretamente alinhado com os Objetivos de Desenvolvimento Sustentável (ODS) 11 e 12 da ONU, 
+                    oferecendo informação e ferramentas para a ação cidadã.
+                </p>
+                <a href="#mapa" class="btn-cta">Encontre o Ponto de Coleta Mais Próximo</a>
+            </div>
+        </section>
+
+        <section id="ods" class="info-section">
+            <div class="container">
+                <h3>🌍 Nossas Bases: ODS 11 e 12</h3>
+                <p style="text-align: center; margin-bottom: 30px;">O projeto Ecovonté existe para contribuir ativamente com a Agenda 2030:</p>
+                
+                <div class="grid-cards">
+                    <div class="card" style="border-left: 5px solid #ff9900;">
+                        <h4>ODS 11: Cidades e Comunidades Sustentáveis</h4>
+                        <p>Focamos em tornar as cidades do ABC mais inclusivas, seguras, resilientes e sustentáveis. Ao guiar o descarte correto, ajudamos a reduzir o impacto ambiental negativo per capita das cidades, uma meta chave do ODS 11.</p>
+                    </div>
+                    <div class="card" style="border-left: 5px solid #00a1cb;">
+                        <h4>ODS 12: Consumo e Produção Responsáveis</h4>
+                        <p>Nosso objetivo é garantir padrões de consumo e de produção sustentáveis. Isso envolve conscientizar sobre a importância de reduzir a geração de resíduos e promover a reciclagem, transformando o lixo em recurso, em linha com o ODS 12.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="conscientizacao" class="info-section" style="background-color: #fff;">
+            <div class="container">
+                <h3>🌱 Conscientização e Informação</h3>
+                <p>O descarte inadequado de resíduos é um desafio ambiental e social. Informar-se é o primeiro passo para agir.</p>
+                
+                <div class="grid-cards">
+                    <div class="card">
+                        <h4>A Regra dos 5 Rs</h4>
+                        <ul>
+                            <li>Recusar</li>
+                            <li>Reduzir</li>
+                            <li>Reutilizar</li>
+                            <li>Reciclar</li>
+                            <li>Repensar</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>O que é Lixo Eletrônico?</h4>
+                        <p>Celulares antigos, pilhas, baterias e eletrodomésticos quebrados. Eles precisam de descarte especial para evitar a contaminação do solo e da água.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Separação Simples</h4>
+                        <p>Papel, Plástico, Vidro e Metal. Lave o que for possível antes de descartar para garantir a reciclagem e ajudar os catadores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mapa" class="map-section">
+            <div class="container">
+                <h3>📍 Pontos de Coleta (ABC)</h3>
+                <p>
+                    Para garantir que os Ecopontos apareçam em todos os dispositivos sem erros, o mapa será aberto diretamente no Google Maps.
+                </p>
+                
+                <div class="map-instruction-box" id="map-simulation-box" style="margin-top: 20px;">
+                    <h4>✨ Encontrar Pontos Mais Próximos</h4>
+                    <p>Clique no botão abaixo. Ele usará sua localização para abrir o Google Maps e ver Ecopontos públicos na sua vizinhança.</p>
+                    <button id="simulate-location-btn" class="btn-cta" style="margin-top: 10px;">Abrir Mapa e Buscar Pontos Próximos</button>
+                    <p style="margin-top: 15px;">**Funciona em PC e Mobile:** O navegador pedirá permissão para acessar sua localização.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="comunidade" class="community-section" style="background-color: #fff;">
+            <div class="container">
+                <h3>💬 Voz da Comunidade: Sugestões</h3>
+                <p style="text-align: center;">Sua opinião transforma! Dê-nos suas ideias de melhoria ou indique um novo local para um ponto de coleta.</p>
+                
+                <div class="simple-form-container">
+                    <form id="suggestion-form" class="simple-form">
+                        
+                        <label for="nome">Seu Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome ou apelido" required>
+
+                        <label for="email">Seu Email (opcional):</label>
+                        <input type="email" id="email" name="email" placeholder="Para contato (opcional)">
+
+                        <label for="sugestao">Sua Sugestão / Ideia:</label>
+                        <textarea id="sugestao" name="sugestao" rows="5" placeholder="Ex: Adicionar Ecoponto no bairro X / Sugiro um novo material de conscientização." required></textarea>
+
+                        <button type="submit" class="btn-submit">Enviar Sugestão</button>
+                    </form>
+                    <p class="form-instruction-footer">
+                        Observação: As sugestões são salvas e exibidas localmente no seu navegador para fins de apresentação.
+                    </p>
+                </div>
+                
+                <div class="feedback-display-area" style="margin-top: 50px;">
+                    <h3>Últimas Sugestões (Feedback)</h3>
+                    <div id="feedback-list" class="grid-cards" style="gap: 20px;">
+                        <p id="no-feedback-message" style="text-align: center; color: #666; width: 100%;">Nenhum feedback enviado ainda. Seja o primeiro!</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="sobre" class="about-section">
+            <div class="container">
+                <h3>👥 Sobre o Projeto Ecovonté</h3>
+                <p>O Ecovonté é um projeto acadêmico desenvolvido por estudantes de Engenharia na FSA - Fundação Santo André para o Acex/Sapex, focado em promover a sustentabilidade urbana e o consumo responsável em linha com a Agenda 2030 da ONU.</p>
+                <p>Entre em contato conosco: ecovontedescarteconscienteofc@gmail.com</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Ecovonté | Projeto Acadêmico FSA - Fundação Santo André</p>
+        </div>
+    </footer>
+
+    <script>
+        // -----------------------------------------------------------
+        // 1. ROLAGEM SUAVE
+        // -----------------------------------------------------------
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // -----------------------------------------------------------
+        // 2. LÓGICA DO FORMULÁRIO DE SUGESTÕES (Feedback Local)
+        // -----------------------------------------------------------
+        const feedbackList = document.getElementById('feedback-list');
+
+        // Função para carregar e exibir feedbacks do localStorage
+        function loadFeedbacks() {
+            const feedbacks = JSON.parse(localStorage.getItem('ecovonteFeedbacks')) || [];
+            
+            feedbackList.innerHTML = ''; // Limpa a lista existente
+            
+            if (feedbacks.length === 0) {
+                feedbackList.innerHTML = '<p id="no-feedback-message" style="text-align: center; color: #666; width: 100%;">Nenhum feedback enviado ainda. Seja o primeiro!</p>';
+                return;
+            }
+
+            // Exibe os feedbacks em ordem reversa (mais recente primeiro)
+            feedbacks.reverse().forEach(fb => {
+                const date = new Date(fb.timestamp).toLocaleDateString('pt-BR');
+                const time = new Date(fb.timestamp).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+                
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style.borderLeft = '4px solid #4CAF50'; 
+                card.innerHTML = `
+                    <h4 style="margin-bottom: 5px;">Sugestão de ${fb.nome}</h4>
+                    <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">Enviado em: ${date} às ${time}</p>
+                    <p>${fb.sugestao}</p>
+                `;
+                feedbackList.appendChild(card);
+            });
+        }
+
+        // Event Listener para o envio do formulário
+        const suggestionForm = document.getElementById('suggestion-form');
+        if (suggestionForm) {
+            suggestionForm.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                
+                const nome = document.getElementById('nome').value;
+                const sugestao = document.getElementById('sugestao').value;
+                
+                const newFeedback = {
+                    nome: nome || 'Anônimo',
+                    sugestao: sugestao,
+                    timestamp: new Date().getTime()
+                };
+
+                const feedbacks = JSON.parse(localStorage.getItem('ecovonteFeedbacks')) || [];
+                if (feedbacks.length >= 10) {
+                    feedbacks.shift(); 
+                }
+                feedbacks.push(newFeedback);
+                localStorage.setItem('ecovonteFeedbacks', JSON.stringify(feedbacks));
+                
+                alert('🎉 Sugestão enviada com sucesso! Agradecemos sua colaboração e ela será exibida abaixo.');
+                
+                loadFeedbacks();
+
+                this.reset();
+            });
+        }
+
+        // Carrega os feedbacks ao carregar a página
+        window.onload = loadFeedbacks;
+    </script>
+    
+    <script src="map.js"></script> 
+
+</body>
+</html>
